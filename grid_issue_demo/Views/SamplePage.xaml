@@ -3,10 +3,16 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 xmlns:vm="clr-namespace:grid_issue_demo.ViewModels"
 			 x:Class="grid_issue_demo.Views.SamplePage"
-			 x:DataType="vm:SampleViewModel">
-
-    <Grid RowDefinitions="Auto,*,Auto">
-        <Label Grid.Row="0" 
+			 xmlns:cc="clr-namespace:grid_issue_demo.CustomControls"
+			 xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+			 x:DataType="vm:SampleViewModel"
+			 Shell.NavBarIsVisible="False"
+                         ios:Page.UseSafeArea="False"
+			 Shell.PresentationMode="{OnIdiom Phone=Modal}">
+	<Grid>
+		<Grid RowDefinitions="Auto,*,Auto">
+        <Label Grid.Row="0"
+			   Margin="8"
                Text="Header"/>
         <ScrollView Grid.Row="1">
             <VerticalStackLayout
@@ -41,7 +47,23 @@
 
             </VerticalStackLayout>
         </ScrollView>
-        <Label Grid.Row="2" 
+		<!--<Button Grid.Row="1"
+				Text="Button 1"
+				Command="{Binding CounterClickedCommand}"
+				HorizontalOptions="Start"
+				VerticalOptions="End"/>
+		<Button Grid.Row="1"
+				Text="Button 2"
+				Command="{Binding CounterClickedCommand}"
+				HorizontalOptions="End"
+				VerticalOptions="End"/>-->
+
+			<cc:Button1 Grid.Row="1"/>
+			<cc:Button2 Grid.Row="1"/>
+
+        <Label Grid.Row="2"
+			   Margin="8"
                Text="Footer"/>
     </Grid>
+	</Grid>
 </ContentPage>
