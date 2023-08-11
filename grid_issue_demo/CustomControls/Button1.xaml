@@ -2,6 +2,7 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 xmlns:vm="clr-namespace:grid_issue_demo.ViewModels"
+			 x:DataType="vm:SampleViewModel"
 			 x:Class="grid_issue_demo.CustomControls.Button1">
     <Button 
 				Text="Button 1"
