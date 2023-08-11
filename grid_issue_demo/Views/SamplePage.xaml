@@ -11,59 +11,59 @@
 			 Shell.PresentationMode="{OnIdiom Phone=Modal}">
 	<Grid>
 		<Grid RowDefinitions="Auto,*,Auto">
-        <Label Grid.Row="0"
-			   Margin="8"
-               Text="Header"/>
-        <ScrollView Grid.Row="1">
-            <VerticalStackLayout
-				Spacing="25"
-				Padding="30,0"
-				VerticalOptions="Center">
+			<Label Grid.Row="0"
+				   Margin="8"
+				   Text="Header"/>
+			<ScrollView Grid.Row="1">
+				<VerticalStackLayout
+					Spacing="25"
+					Padding="30,0"
+					VerticalOptions="Center">
 
-                <Image
-					Source="dotnet_bot.png"
-					SemanticProperties.Description="Cute dot net bot waving hi to you!"
-					HeightRequest="200"
-					HorizontalOptions="Center" />
+					<Image
+						Source="dotnet_bot.png"
+						SemanticProperties.Description="Cute dot net bot waving hi to you!"
+						HeightRequest="200"
+						HorizontalOptions="Center" />
 
-                <Label
-					Text="Hello, World!"
-					SemanticProperties.HeadingLevel="Level1"
-					FontSize="32"
-					HorizontalOptions="Center" />
+					<Label
+						Text="Hello, World!"
+						SemanticProperties.HeadingLevel="Level1"
+						FontSize="32"
+						HorizontalOptions="Center" />
 
-                <Label
-					Text="Welcome to .NET Multi-platform App UI"
-					SemanticProperties.HeadingLevel="Level2"
-					SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-					FontSize="18"
-					HorizontalOptions="Center" />
+					<Label
+						Text="Welcome to .NET Multi-platform App UI"
+						SemanticProperties.HeadingLevel="Level2"
+						SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+						FontSize="18"
+						HorizontalOptions="Center" />
 
-                <Button
-					Text="{Binding Message}"
-					SemanticProperties.Hint="Counts the number of times you click"
+					<Button
+						Text="{Binding Message}"
+						SemanticProperties.Hint="Counts the number of times you click"
+						Command="{Binding CounterClickedCommand}"
+						HorizontalOptions="Center" />
+
+				</VerticalStackLayout>
+			</ScrollView>
+			<!--<Button Grid.Row="1"
+					Text="Button 1"
 					Command="{Binding CounterClickedCommand}"
-					HorizontalOptions="Center" />
+					HorizontalOptions="Start"
+					VerticalOptions="End"/>
+			<Button Grid.Row="1"
+					Text="Button 2"
+					Command="{Binding CounterClickedCommand}"
+					HorizontalOptions="End"
+					VerticalOptions="End"/>-->
 
-            </VerticalStackLayout>
-        </ScrollView>
-		<!--<Button Grid.Row="1"
-				Text="Button 1"
-				Command="{Binding CounterClickedCommand}"
-				HorizontalOptions="Start"
-				VerticalOptions="End"/>
-		<Button Grid.Row="1"
-				Text="Button 2"
-				Command="{Binding CounterClickedCommand}"
-				HorizontalOptions="End"
-				VerticalOptions="End"/>-->
+				<cc:Button1 Grid.Row="1"/>
+				<cc:Button2 Grid.Row="1"/>
 
-			<cc:Button1 Grid.Row="1"/>
-			<cc:Button2 Grid.Row="1"/>
-
-        <Label Grid.Row="2"
-			   Margin="8"
-               Text="Footer"/>
-    </Grid>
+			<Label Grid.Row="2"
+				   Margin="8"
+				   Text="Footer"/>
+		</Grid>
 	</Grid>
 </ContentPage>
